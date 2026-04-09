@@ -29,8 +29,9 @@ df_test['ID'] = ['ID_' + str(i).zfill(5) for i in range(len(df_test))]
 
 print("🎲 Injetando Ruído Estatístico (Jitter) para evitar Fingerprinting...")
 # Adiciona variação nas colunas de Temp e Umidade =
-df_test['TEMPERATURA DO AR - BULBO SECO, HORARIA (C)'] += np.random.normal(0, 0.01, size=len(df_test))
-df_test['UMIDADE RELATIVA DO AR, HORARIA (%)'] += np.random.normal(0, 0.01, size=len(df_test))
+df_test['TEMPERATURA DO AR - BULBO SECO, HORARIA (C)'] += np.random.normal(0, 0.8, size=len(df_test))
+df_test['UMIDADE RELATIVA DO AR, HORARIA (%)'] += np.random.normal(0, 2.0, size=len(df_test))
+df_test['PRESSAO ATMOSFERICA AO NIVEL DA ESTACAO, HORARIA (mB)'] += np.random.normal(0, 1.5, size=len(df_test))
 
 print("🔀 Embaralhando as linhas do Teste...")
 df_test = df_test.sample(frac=1).reset_index(drop=True)
