@@ -18,7 +18,7 @@ Abaixo estão os projetos desenvolvidos, organizados do mais recente para o mais
 
 | Status | Projeto | Tecnologias Principais | Descrição Curta |
 | :---: | :--- | :--- | :--- |
-| ✅ | **[Pipeline ETL Seguro - Hackathon LIAO 2026](./)** | `Python`, `Pandas`, `Segurança` | Pipeline de anonimização e injeção de ruído estatístico para evitar Data Leakage em competições de ML. |
+| ✅ | **[Pipeline ETL Seguro - Hackathon LIAO 2026]([Pipeline ETL Seguro - Hackathon LIAO 2026](./01_Pipeline_Hackathon))** | `Python`, `Pandas`, `Segurança` | Pipeline de anonimização e injeção de ruído estatístico para evitar Data Leakage em competições de ML. |
 | 🚧 | **Projeto com Docker (Exemplo Futuro)** | `Docker`, `PostgreSQL` | (Espaço para o seu próximo projeto...) |
 | 🚧 | **Data Lake na AWS (Exemplo Futuro)** | `AWS S3`, `Boto3` | (Espaço para o seu próximo projeto...) |
 
