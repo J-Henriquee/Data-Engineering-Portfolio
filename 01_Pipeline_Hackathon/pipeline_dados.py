@@ -18,11 +18,15 @@ df_train = df[df['Ano'] <= 2020].copy()
 df_test = df[df['Ano'] == 2021].copy()
 
 # 2. ANONIMIZAÇÃO E SEGURANÇA
-print("🔒 Anonimizando o Gabarito (Removendo Datas)...")
-# Guarda as respostas para o Lucca corrigir depois
-gabarito_secreto = df_test[['DATA (YYYY-MM-DD)', 'PRECIPITACAO TOTAL HORARIO (mm)']].copy()
+print("🔒 Criando IDs e Anonimizando o Gabarito...")
 
-# Remove as colunas que dão a resposta ou a data pros participantes
+# 1º Passo: Cria o ID fake primeiro para todo mundo!
+df_test['ID'] = ['ID_' + str(i).zfill(5) for i in range(len(df_test))]
+
+# 2º Passo: Guarda o Gabarito levando o ID junto!
+gabarito_secreto = df_test[['ID', 'PRECIPITACAO TOTAL HORARIO (mm)']].copy()
+
+# 3º Passo: Remove as colunas que dão a resposta da base dos participantes
 df_test = df_test.drop(columns=['DATA (YYYY-MM-DD)', 'Ano', 'PRECIPITACAO TOTAL HORARIO (mm)'])
 # Cria o ID fake
 df_test['ID'] = ['ID_' + str(i).zfill(5) for i in range(len(df_test))]
