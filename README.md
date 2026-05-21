@@ -6,7 +6,7 @@ Este repositório documenta a minha jornada e evolução na construção de infr
 
 ## 🧰 Stack Tecnológico em Estudo / Uso
 * **Linguagens:** Python, SQL
-* **Processamento & Pandas:** Pandas, NumPy
+* **Processamento & Transformação:** Pandas, NumPy, PyArrow
 * **Infraestrutura & Cloud:** Docker, AWS (em breve)
 * **Orquestração:** (em breve)
 
@@ -18,8 +18,8 @@ Abaixo estão os projetos desenvolvidos, organizados do mais recente para o mais
 
 | Status | Projeto | Tecnologias Principais | Descrição Curta |
 | :---: | :--- | :--- | :--- |
-| ✅ | **[Pipeline ETL Seguro - Hackathon LIAO 2026]([Pipeline ETL Seguro - Hackathon LIAO 2026](./01_Pipeline_Hackathon))** | `Python`, `Pandas`, `Segurança` | Pipeline de anonimização e injeção de ruído estatístico para evitar Data Leakage em competições de ML. |
-| 🚧 | **Projeto com Docker (Exemplo Futuro)** | `Docker`, `PostgreSQL` | (Espaço para o meu próximo projeto...) |
+| ✅ | **[🔒 Pipeline ETL Seguro - Hackathon LIAO 2026](./02_pipeline_seguro_hackathon)** | `Python`, `Pandas`, `Segurança` | Pipeline de anonimização de PII e injeção de ruído estatístico para evitar Data Leakage no megadataset da competição. |
+| ✅ | **[🌤️ ETL Climate Pipeline](./01_weather_api_pipeline)** | `Python`, `Pandas`, `Parquet` | Ingestão via API (Open-Meteo), tratamento de nulos e tipagem, com persistência em formato colunar particionado. |
 | 🚧 | **Data Lake na AWS (Exemplo Futuro)** | `AWS S3`, `Boto3` | (Espaço para o meu próximo projeto...) |
 
 ---
