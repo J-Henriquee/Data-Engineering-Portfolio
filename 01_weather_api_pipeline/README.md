@@ -277,7 +277,10 @@ ORDER BY media_temp DESC;
 | [Snappy](https://github.com/google/snappy) | Algoritmo de compressão dos arquivos Parquet |
 
 ---
+---
 
-> **Autor:** Portfólio – Engenharia de Dados  
-> **Licença:** MIT  
-> Contribuições e sugestões são bem-vindas via Issues e Pull Requests.
+**Autor:** José Henrique (Nean)
+**LinkedIn:** [José Henrique](https://linkedin.com/in/jose-henrique-nean)
+**GitHub:** [J-Henriquee](https://github.com/J-Henriquee)
+
+*Projeto desenvolvido para consolidar conhecimentos em Engenharia de Dados, com foco em otimização e boas práticas.*
