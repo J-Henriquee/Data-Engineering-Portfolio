@@ -1,0 +1,10 @@
+# Ignorar o ambiente virtual
+.venv/
+
+# Ignorar as zonas de dados 
+raw_data/
+processed_data/
+
+# Ignorar lixo do sistema
+__pycache__/
+*.pyc
