@@ -7,9 +7,7 @@ arquivo_padrao = Path(__file__).parent
 
 def processa_dados(response, n):
 
-    response_json = response.json()
-
-    lista_animes = response_json["data"]
+    lista_animes = response["data"]
     dados_limpos = []
 
     for anime in lista_animes:
@@ -28,16 +26,16 @@ def processa_dados(response, n):
 
 
 
-
-
 for n in range(1,41):
     response = requests.get(f'https://api.jikan.moe/v4/top/anime?page={n}')
 
     if response.status_code == 200:
-        print("Sucesso!")
+        print(f"Sucesso! Page_number{n}")
     else:
         raise Exception(f"Erro {response}")
+    
+    dados_json = response.json()
 
-    processa_dados(response, n)
+    processa_dados(dados_json, n)
 
     time.sleep(2) 
