@@ -1,4 +1,3 @@
-Markdown
 # ⛩️ Jikan API ETL Pipeline: Top 1000 Anime
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
@@ -32,7 +31,7 @@ The pipeline is fully automated at the operating system level, designed with str
 
 ## 📂 Project Structure
 ```text
-04_pipeline_jikan/
+01_pipeline_jikan/
 │
 ├── .venv/                      # Python Virtual Environment
 ├── raw_data/                   # Data Lake (Raw API Partitions)
@@ -45,28 +44,31 @@ The pipeline is fully automated at the operating system level, designed with str
 ├── transformacao.py            # Data Cleaning and Deduplication
 ├── analise.py                  # Business Insights (EDA)
 └── README.md                   # Project Documentation
-🚀 How to Run Locally
+```
+
+## 🚀 How to Run Locally
+
 Clone the repository:
+```bash
+git clone https://github.com
+cd Data-Engineering-Portfolio/01_pipeline_jikan
+```
 
-Bash
-git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-cd 04_pipeline_jikan
 Activate the virtual environment and install dependencies:
-
-Bash
+```bash
 source .venv/bin/activate
 pip install pandas requests
-Run the pipeline manually:
+```
 
-Bash
+Run the pipeline manually:
+```bash
 python extracao.py
 python transformacao.py
 python analise.py
-🧠 Key Learnings
-Building resilient API consumers with rate limiting.
+```
 
-Memory-efficient data consolidation using pathlib and list appends before pd.concat.
-
-Applying Data Quality rules (drop_duplicates, dropna with subsets) for real-world messy data.
-
-Linux OS automation using Cron jobs with background environments.
+## 🧠 Key Learnings
+* **Resilience:** Building API consumers with rate limiting to bypass blocking.
+* **Memory Efficiency:** Consolidating data using `pathlib` and list appends before executing `pd.concat`.
+* **Data Quality:** Applying `drop_duplicates` and `dropna` with precise subsets for messy data.
+* **Automation:** Linux OS orchestration using Cron jobs tied to virtual environments.
