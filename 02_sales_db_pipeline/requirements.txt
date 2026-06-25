@@ -1,9 +1,0 @@
-# ─────────────────────────────────────────────
-#  requirements.txt  –  Sales DB Pipeline
-# ─────────────────────────────────────────────
-
-# Data manipulation & synthetic data generation
-pandas==2.2.3
-numpy==1.26.4
-
-# sqlite3 faz parte da stdlib do Python — sem instalação adicional necessária
