@@ -8,12 +8,12 @@ country_mapping = {
     'Korea Republic': 'South Korea',
     'Korea DPR': 'North Korea',
     'USA': 'United States',
-    "Cte d'Ivoire": "Côte d'Ivoire", # Tratando aquele erro bizarro de codificação do CSV
-    'rn">Republic of Ireland': 'Republic of Ireland', # Outro erro de formatação do CSV antigo
+    "Cte d'Ivoire": "Côte d'Ivoire", 
+    'rn">Republic of Ireland': 'Republic of Ireland', 
     'rn">United Arab Emirates': 'United Arab Emirates',
     'rn">Trinidad and Tobago': 'Trinidad and Tobago',
     'rn">Serbia and Montenegro': 'Serbia and Montenegro',
-    'rn">Bosnia and Herzegovina': 'Bosnia-Herzegovina' # A API usa com hífen
+    'rn">Bosnia and Herzegovina': 'Bosnia-Herzegovina' 
 }
 
 def transformar_dados():
@@ -65,9 +65,5 @@ def transformar_dados():
     df_final['time_casa'] =  df_final['time_casa'].replace(country_mapping)
     df_final['time_visitante'] =  df_final['time_visitante'].replace(country_mapping)
 
-
-
-
-    
     return df_final
 
