@@ -1,13 +1,27 @@
-import pandas as pd
+"""
+analytics.py
+
+Example analytical query against the loaded data:
+top 5 teams by total goals scored as the home team.
+"""
+
 import os
+import pandas as pd
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
+
 load_dotenv()
 
-minha_url_secreta = os.getenv('DATABASE_URL')
+database_url = os.getenv('DATABASE_URL')
+engine = create_engine(database_url)
 
-engine = create_engine(minha_url_secreta)
+top_scorers_query = """
+    SELECT time_casa, SUM(gols_casa) AS total_gols
+    FROM partida_copas
+    GROUP BY time_casa
+    ORDER BY SUM(gols_casa) DESC
+    LIMIT 5;
+"""
 
-df_query = pd.read_sql_query("SELECT time_casa, SUM(gols_casa) FROM partida_copas GROUP BY time_casa ORDER BY SUM(gols_casa) DESC LIMIT 5;", con=engine)
-
-print(df_query)
+top_scorers_df = pd.read_sql_query(top_scorers_query, con=engine)
+print(top_scorers_df)
