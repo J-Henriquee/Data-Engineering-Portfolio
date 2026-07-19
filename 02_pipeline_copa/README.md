@@ -104,3 +104,8 @@ architecture:
 - Add orchestration (Apache Airflow or Prefect) to schedule and monitor runs.
 - Replace direct loading with a proper transformation layer using dbt.
 - Explore PySpark for distributed processing at larger scale.
+## Known Limitations
+- The historical dataset covers World Cups from 1930 to 2018; the 2022
+  tournament is not included (not present in the source dataset used).
+  Filling this gap — ideally via the same API already integrated — is a
+  natural next step.
