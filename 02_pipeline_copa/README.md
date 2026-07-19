@@ -88,12 +88,6 @@ dictionary, rather than being silently ignored.
    streamlit run src/dashboard.py
    ```
 
-## Dashboard
-
-![Dashboard screenshot](docs/dashboard_screenshot.png)
-
-*(add your dashboard screenshot to a `docs/` folder and update the path above)*
-
 ## Next Steps
 
 Planned evolutions to take this from a batch pipeline to a more advanced
