@@ -113,6 +113,7 @@ dictionary, rather than being silently ignored.
 ## Dashboard
 
 ![Dashboard screenshot](docs/screenshot.png)
+
 ## Known Limitations
 
 - The historical dataset covers World Cups from 1930 to 2018; the 2022
