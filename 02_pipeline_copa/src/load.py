@@ -26,6 +26,6 @@ transformed_df.to_csv(output_path, index=False, encoding='utf-8')
 
 # Load into PostgreSQL (replaces the table on every run — a simple full refresh)
 engine = create_engine(database_url)
-transformed_df.to_sql(name='partida_copas', con=engine, if_exists='replace', index=False)
+transformed_df.to_sql(name='stg_partidas', con=engine, if_exists='replace', index=False)
 
 print(transformed_df)
