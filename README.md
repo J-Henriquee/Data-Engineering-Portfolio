@@ -1,4 +1,4 @@
-# 🛠️ Data Engineering Portfolio | Nean
+# 🛠️ Data Engineering Portfolio | Neean
 
 Bem-vindo ao meu portfólio central de Engenharia de Dados! 🚀
 
