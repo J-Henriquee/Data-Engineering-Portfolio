@@ -1,7 +1,7 @@
 """
 transform.py
 
-Combines historical World Cup match data (Kaggle CSV, 1930-2022) with
+Combines historical World Cup match data (Kaggle CSV, 1930-2018) with
 live match data from the football-data.org API (2026 tournament) into
 a single, standardized DataFrame.
 
@@ -39,7 +39,7 @@ def transform_data():
     """
     project_root = Path(__file__).resolve().parent.parent
 
-    # --- Historical data (Kaggle CSV, 1930-2022) ---
+    # --- Historical data (Kaggle CSV, 1930-2018) ---
     historical_df = pd.read_csv(project_root / "data" / "raw" / "world_cup_matches.csv")
 
     selected_columns = ['Date', 'Stage', 'Home Team', 'Away Team', 'Home Goals', 'Away Goals']
@@ -88,7 +88,7 @@ def transform_data():
     historical_df['fase'] = historical_df['fase'].str.upper().str.strip()
     historical_df['fase'] = historical_df['fase'].str.replace(' ', '_').str.replace('-', '_')
 
-    # Stack historical (1930-2022) and live (2026) data into a single table
+    # Stack historical (1930-2018) and live (2026) data into a single table
     combined_df = pd.concat([historical_df, api_df], ignore_index=True)
 
     # Apply country name standardization to both team columns
